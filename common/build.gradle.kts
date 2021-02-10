@@ -13,5 +13,16 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":application"))
+
+}
+
+tasks.withType<KotlinCompile> {
+    kotlinOptions {
+        freeCompilerArgs = listOf("-Xjsr305=strict")
+        jvmTarget = "1.8"
+    }
+}
+
+tasks.withType<Test> {
+    useJUnitPlatform()
 }

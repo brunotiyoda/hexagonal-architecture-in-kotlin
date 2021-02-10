@@ -4,6 +4,6 @@ include(
     "persistence",
     "api",
     "api-external",
-    "configuration",
-    "common"
+    "common",
+    "run"
 )

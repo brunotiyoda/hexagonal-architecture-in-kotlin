@@ -3,8 +3,8 @@ package com.example.hexarq.entities
 import com.example.hexarq.domains.ExampleDomain
 
 data class ExampleEntity(
-    val id: Long? = 0,
-    val message: String
+    val id: Long? = 1,
+    val message: String? = null
 ) {
 }
 

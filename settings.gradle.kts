@@ -1,2 +1,2 @@
 rootProject.name = "hexarq"
-include("domain", "persistence", "service", "api", "app")
+include("domain", "persistence", "service", "api", "app", "api-external")

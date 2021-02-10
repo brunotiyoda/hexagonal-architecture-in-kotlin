@@ -1,4 +1,4 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+description = "configuration module"
 
 plugins {
     id("org.springframework.boot")
@@ -14,6 +14,9 @@ repositories {
 
 dependencies {
     implementation(project(":api"))
+    implementation(project(":api-external"))
+    implementation(project(":application"))
+    implementation(project(":persistence"))
 
     implementation("org.springframework.boot:spring-boot-starter-web")
 }

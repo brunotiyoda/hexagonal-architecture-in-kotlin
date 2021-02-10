@@ -13,5 +13,8 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":application"))
+    implementation(project(":api"))
+
+    implementation("org.springframework.boot:spring-boot-starter-web")
 }
+

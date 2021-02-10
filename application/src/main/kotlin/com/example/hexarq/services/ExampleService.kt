@@ -7,6 +7,7 @@ import com.example.hexarq.repositories.ExampleRepository
 import com.example.hexarq.usecases.CallApiExternalUseCase
 import com.example.hexarq.usecases.ExampleUseCase
 
+
 class ExampleService(
     private val callApiExternalUseCase: CallApiExternalUseCase,
     private val exampleRepository: ExampleRepository

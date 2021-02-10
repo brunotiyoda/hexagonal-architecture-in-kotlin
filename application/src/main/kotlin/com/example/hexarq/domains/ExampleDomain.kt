@@ -1,6 +1,6 @@
 package com.example.hexarq.domains
 
-import com.example.hexarq.ExampleEntity
+import com.example.hexarq.entities.ExampleEntity
 
 class ExampleDomain(
     val message: String? = null
@@ -8,5 +8,5 @@ class ExampleDomain(
 }
 
 fun ExampleDomain.toExampleEntity(): ExampleEntity {
-    return ExampleEntity(messagem = message.let { it.orEmpty() })
+    return ExampleEntity(message = message.let { it.orEmpty() })
 }

@@ -13,6 +13,12 @@ class ExampleService(
 ) : ExampleUseCase {
 
     override fun create(message: String): String {
+
+        val buildExampleDomain = ExampleDomain.Builder()
+            .with { builder -> builder.message = "new message"; }
+            .build()
+        // ter um mapper para entity ???
+
         val exampleDomain = ExampleDomain(message = message)
         val exampleEntity = exampleRepository.save(exampleDomain.toExampleEntity())
         return exampleEntity.toExampleDomain().message.let { it.orEmpty() }

@@ -4,17 +4,14 @@ plugins {
     id 'org.jetbrains.kotlin.jvm'
 }
 
-group 'com.example.hexarq'
-version '0.0.1-SNAPSHOT'
-
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile(project(":api"))
-    compile(project(":application"))
-    compile(project(":persistence"))
+    implementation(project(":api"))
+    implementation(project(":application"))
+    implementation(project(":persistence"))
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
 

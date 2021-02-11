@@ -1,6 +1,5 @@
 package com.example.hexarq.domains
 
-import com.example.hexarq.entities.ExampleEntity
 import java.util.function.Consumer
 
 class ExampleDomain(
@@ -23,9 +22,4 @@ class ExampleDomain(
         }
     }
 
-}
-
-// converte via extention function
-fun ExampleDomain.toExampleEntity(): ExampleEntity {
-    return ExampleEntity(message = message.let { it.orEmpty() })
 }

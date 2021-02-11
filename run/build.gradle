@@ -13,7 +13,8 @@ repositories {
 
 dependencies {
     compile(project(":api"))
-
+    compile(project(":application"))
+    compile(project(":persistence"))
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
 

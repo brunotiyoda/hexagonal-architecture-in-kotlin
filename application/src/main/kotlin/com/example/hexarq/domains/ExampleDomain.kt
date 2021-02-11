@@ -21,5 +21,4 @@ class ExampleDomain(
             return ExampleDomain(this)
         }
     }
-
 }

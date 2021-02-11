@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    compile(project(":application"))
+    implementation(project(":application"))
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
 

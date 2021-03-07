@@ -10,13 +10,18 @@ plugins {
 
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
-repositories {
-    mavenCentral()
+java {
+    withSourcesJar()
 }
 
 allprojects {
+
     group = "com.example"
     version = "0.0.1-SNAPSHOT"
+
+    tasks.withType<Test> {
+        useJUnitPlatform()
+    }
 
     tasks.withType<KotlinCompile> {
         kotlinOptions {
@@ -24,9 +29,28 @@ allprojects {
             jvmTarget = "1.8"
         }
     }
+}
 
-    tasks.withType<Test> {
-        useJUnitPlatform()
+subprojects {
+    apply(plugin = "java")
+    apply(plugin = "io.spring.dependency-management")
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+
     }
 }
 
+tasks.jar {
+    manifest {
+        attributes(
+            mapOf(
+                "Implementation-Title" to project.name,
+                "Implementation-Version" to project.version
+            )
+        )
+    }
+}

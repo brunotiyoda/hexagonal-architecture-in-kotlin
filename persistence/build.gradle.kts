@@ -11,7 +11,8 @@ repositories {
 dependencies {
     implementation(project(":application"))
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation("org.jetbrains.kotlin:kotlin-stdlib")
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
 
     implementation("com.h2database:h2:1.4.200")
 

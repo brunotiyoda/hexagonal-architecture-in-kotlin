@@ -1,5 +1,3 @@
-rootProject.name = "hexarq"
-
 include(
     "application",
     "persistence",
